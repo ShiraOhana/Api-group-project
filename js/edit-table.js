@@ -27,7 +27,7 @@ function editRowCallBack(event) {
   const btnEdit = event.target;
   const container = btnEdit.parentElement;
   const btnConfirm = container.querySelector(".btn-confirm");
-  
+
   btnEdit.setAttribute("data-display", "false");
   btnConfirm.setAttribute("data-display", "true");
 }
@@ -36,7 +36,7 @@ function confirmCallBack(event) {
   const btnConfirm = event.target;
   const container = btnConfirm.parentElement;
   const btnEdit = container.querySelector(".btn-edit");
-  
+
   btnConfirm.setAttribute("data-display", "false");
   btnEdit.setAttribute("data-display", "true");
 }
