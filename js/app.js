@@ -1,5 +1,5 @@
 import { getAllStudents } from "./load_all_data.js";
-import { editTable } from "./editTable";
+import { deleteRow } from "./editTable";
 
 // getAllStudents().then(console.log);
 
