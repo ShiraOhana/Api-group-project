@@ -1,0 +1,6 @@
+button[data-display="false"]{
+    display: none;
+}
+button[data-display="true"]{
+    display: block;
+}

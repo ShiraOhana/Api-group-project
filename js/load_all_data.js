@@ -1,4 +1,10 @@
 async function addAllPropertyToStudents(arr) {
+    // const arrPromises = [];
+    // for (let obj of arr) {
+    //     arrPromises.push(fetch(`https://capsules-asb6.herokuapp.com/api/user/${obj.id}`));
+    // }
+    
+    
     for (let obj of arr) {
         const response = await fetch(`https://capsules-asb6.herokuapp.com/api/user/${obj.id}`);
         const studentProperty = await response.json();
@@ -10,12 +16,12 @@ async function addAllPropertyToStudents(arr) {
     }
 }
 
-async function getMordyStudents() {
+async function getMordiStudents() {
     try {
         const response = await fetch("https://capsules-asb6.herokuapp.com/api/teacher/mordi");
-        const mordyStudents = await response.json();
-        await addAllPropertyToStudents(mordyStudents);
-        return mordyStudents;
+        const mordiStudents = await response.json();
+        await addAllPropertyToStudents(mordiStudents);
+        return mordiStudents;
     } catch (err) {
         console.error(err);
     }
@@ -33,10 +39,10 @@ async function getToamStudents() {
 }
 
 export async function getAllStudents() {
-    const mordyStudentsPromise = getMordyStudents();
+    const mordiStudentsPromise = getMordiStudents();
     const toamStudentsPromise = getToamStudents();
-    const mordyStudents = await mordyStudentsPromise;
+    const mordiStudents = await mordiStudentsPromise;
     const toamStudents = await toamStudentsPromise;
-    const allStudents = mordyStudents.concat(toamStudents);
+    const allStudents = mordiStudents.concat(toamStudents);
     return allStudents;
 }
