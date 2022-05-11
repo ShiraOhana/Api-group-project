@@ -12,7 +12,6 @@ function removeParent(event) {
   const btn = event.target;
   const idBtn = btn.getAttribute("id");
   const id = idBtn.slice(7);
-  console.log(id);
   const parent = document.getElementById(id);
   parent.remove();
 }
