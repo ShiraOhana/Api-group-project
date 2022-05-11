@@ -6,9 +6,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="js/app.js" type="module" defer></script>
 </head>
-<link rel="stylesheet" href="css/style.css" />
-<script src="js/app.js" type="module" defer></script>
 
 <body>
 <form>
@@ -22,33 +22,36 @@
     <option value="hobby">Hobby</option>
   </select>
   <input type="text" name="search-text" id="search-text">
+  <button>reset</button>
 </form>
 
   <table>
     <tr>
-      <th>id</th>
-      <th>gender</th>
-      <th>first name</th>
-      <th>last name</th>
+      <th>capsule</th>
+      <th>city</th>
       <th>hobby</th>
       <th>age</th>
-      <th>city</th>
-      <th>capsule</th>
+      <th>gender</th>
+      <th>last name</th>
+      <th>first name</th>
+      <th>id</th>
       <th>remove</th>
     </tr>
 
     <!-- to append with js: -->
     <tr>
-      <td>018</td>
-      <td>male</td>
-      <td>לוי</td>
-      <td>אפרים</td>
+      <td>5</td>
+      <td>תל-אביב</td>
       <td>לטייל</td>
       <td>22</td>
-      <td>תל-אביב</td>
-      <td>5</td>
-      <td><button>remove</button></td>
+      <td>male</td>
+      <td>אפרים</td>
+      <td>לוי</td>
+      <td>018</td>
+      <td><button id="018">remove</button></td>
     </tr>
+
+
   </table>
 
 </body>
