@@ -9,45 +9,44 @@
     <script src="js/app.js" type="module" defer></script>
   </head>
 
-  <body>
-    <form>
-      Sort by
-      <select name="category" id="category">
-        <option value="first-name">First name</option>
-        <option value="last-name">Last Name</option>
-        <option value="capsule">Capsule</option>
-        <option value="age">Age</option>
-        <option value="city">City</option>
-        <option value="gender">Gender</option>
-        <option value="hobby">Hobby</option>
-      </select>
-      <input
-        type="text"
-        name="search-text"
-        id="search-text"
-        placeholder="Type a name..."
-      />
-      <button>reset</button>
-    </form>
+<body>
+  <form>
+    <select name="category" id="category">
+      <option value="firstName">First name</option>
+      <option value="lastName">Last Name</option>
+      <option value="capsule">Capsule</option>
+      <option value="age">Age</option>
+      <option value="city">City</option>
+      <option value="gender">Gender</option>
+      <option value="hobby">Hobby</option>
+    </select>
+    <input type="text" name="search-text" id="search-text">
+    <button>reset</button>
+  </form>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Capsule</th>
-          <th>City</th>
-          <th>Hobby</th>
-          <th>Age</th>
-          <th>Gender</th>
-          <th>Last name</th>
-          <th>First name</th>
-          <th>id</th>
-          <th>Edit</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- to append with js: -->
-      </tbody>
-    </table>
-  </body>
+  <table>
+    <thead>
+      <tr>
+        <th class="title" data-name="capsule" data-sort="ascending">capsule</th>
+        <th class="title" data-name="city" data-sort="ascending">city</th>
+        <th class="title" data-name="hobby" data-sort="ascending">hobby</th>
+        <th class="title" data-name="age" data-sort="ascending">age</th>
+        <th class="title" data-name="gender" data-sort="ascending">gender</th>
+        <th class="title" data-name="lastName" data-sort="ascending">last name</th>
+        <th class="title" data-name="firstName" data-sort="ascending">first name</th>
+        <th class="title" data-name="id" data-sort="ascending">id</th>
+        <th class="title" data-sort="ascending">edit</th>
+        <th class="title" data-sort="ascending">remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- to append with js: -->
+      
+    </tbody>
+
+
+  </table>
+
+</body>
+
 </html>
