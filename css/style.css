@@ -1,6 +1,39 @@
-button[data-display="false"]{
-    display: none;
+button[data-display="false"] {
+  display: none;
 }
-button[data-display="true"]{
-    display: block;
+button[data-display="true"] {
+  display: block;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+select,
+input {
+  padding: 5px 10px;
+  margin: 10px;
+}
+button {
+  padding: 5px;
+  border-radius: 4px;
+  background-color: rgb(151, 23, 177);
+  cursor: pointer;
+  color: #fff;
+}
+button:hover {
+  background-color: rgb(147, 66, 163);
+  transition: all 300ms ease-in-out;
+}
+
+th,
+table,
+thead {
+  border: 1px solid grey;
+}
+th {
+  padding: 5px;
+  background-color: rgb(156, 113, 165);
+}
+table {
+  margin: 0 auto;
 }
