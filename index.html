@@ -24,7 +24,23 @@
       <button>reset</button>
     </form>
 
-    <table>
+<body>
+  <form>
+    <select name="category" id="category">
+      <option value="first-name">First name</option>
+      <option value="last-name">Last Name</option>
+      <option value="capsule">Capsule</option>
+      <option value="age">Age</option>
+      <option value="city">City</option>
+      <option value="gender">Gender</option>
+      <option value="hobby">Hobby</option>
+    </select>
+    <input type="text" name="search-text" id="search-text">
+    <button>reset</button>
+  </form>
+
+  <table>
+    <thead>
       <tr>
         <th>capsule</th>
         <th>city</th>
@@ -34,9 +50,11 @@
         <th>last name</th>
         <th>first name</th>
         <th>id</th>
+        <th>edit</th>
         <th>remove</th>
       </tr>
-
+    </thead>
+    <tbody>
       <!-- to append with js: -->
       <tr>
         <td>5</td>
@@ -47,8 +65,14 @@
         <td>אפרים</td>
         <td>לוי</td>
         <td>018</td>
-        <td><button id="018">remove</button></td>
+        <td><button id="edit-018">edit</button></td>
+        <td><button id="remove-018">remove</button></td>
       </tr>
-    </table>
-  </body>
+    </tbody>
+
+
+  </table>
+
+</body>
+
 </html>
