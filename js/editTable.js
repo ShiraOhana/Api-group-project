@@ -1,8 +1,14 @@
 // const editButton = document.querySelector("edit-button");
 // const deleteButton = document.querySelector("delete-button");
 
-function editTable() {}
-// editButton.addEventListener("click", editTable);
+export function editTable(element) {
+  element.addEventListener("click", editRow);
+}
+
+function editRow(event) {
+  let row = event.target.parentElement();
+  row.setAtribute = "a";
+}
 
 export function deleteRow(element) {
   element.addEventListener("click", removeParent);
