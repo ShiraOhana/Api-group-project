@@ -1,5 +1,5 @@
 async function addAllPropertyToStudents(arr) {
-    arr.forEach(async obj => {
+    for (let obj of arr) {
         const response = await fetch(`https://capsules-asb6.herokuapp.com/api/user/${obj.id}`);
         const studentProperty = await response.json();
         obj.gender = studentProperty.gender;
@@ -7,7 +7,7 @@ async function addAllPropertyToStudents(arr) {
         obj.age = studentProperty.age;
         obj.city = studentProperty.city;
         obj.capsule = studentProperty.capsule;
-    });
+    }
 }
 
 async function getMordyStudents() {

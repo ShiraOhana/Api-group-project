@@ -9,6 +9,10 @@ export function deleteRow(element) {
 }
 
 function removeParent(event) {
-  let parent = event.target.parentElement();
+  const btn = event.target;
+  const idBtn = btn.getAttribute("id");
+  const id = idBtn.slice(7);
+  console.log(id);
+  const parent = document.getElementById(id);
   parent.remove();
 }
