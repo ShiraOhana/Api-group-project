@@ -1,5 +1,5 @@
 import { getAllStudents } from "./load_all_data.js";
-import { deleteRow } from "./editTable";
+import { deleteRow } from "./edit-table.js";
 
 // getAllStudents().then(console.log);
 
@@ -7,8 +7,8 @@ async function appendAllStudents() {
   const tbody = document.querySelector("tbody");
   const allStudents = await getAllStudents();
   allStudents.forEach((StudentObj) => {
-    console.log(StudentObj);
     const newTr = document.createElement("tr");
+    newTr.setAttribute("id", StudentObj.id);
     // capsule:
     const tdCapsule = document.createElement("td");
     tdCapsule.textContent = StudentObj.capsule;
@@ -53,6 +53,7 @@ async function appendAllStudents() {
     const btnRemove = document.createElement("button");
     btnRemove.setAttribute("id", `remove-${StudentObj.id}`);
     btnRemove.textContent = "remove";
+    deleteRow(btnRemove);
     tdBtnRemove.appendChild(btnRemove);
     newTr.appendChild(tdBtnRemove);
     // append:
